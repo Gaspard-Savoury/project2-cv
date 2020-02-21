@@ -1,0 +1,289 @@
+body
+{
+	width: 1000px;
+	margin: auto;
+	font-family: sans-serif;
+}
+
+#bloc_page
+{
+	display: flex;
+	justify-content: center;
+}
+
+/*Début du côté gauche*/
+
+#left_side /*liseré bleu*/
+{
+	background-color: #1976D2;
+	width: 250px;
+}
+
+#left_side img
+{
+	width: 150px;
+	height: 150px;
+	margin: 20px 50px 0 50px;
+	justify-content: center;
+	border-radius: 50%;
+	border: 1px #263238 solid;
+}
+
+#left_side h1
+{
+	background-color: #263238;
+	color: #1976D2;
+	padding: 3px 0 3px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#left_side_info
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 84%;
+}
+
+#contact ul
+{
+	margin-left: -10px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#contact h2
+{
+	font-weight: normal;
+	font-size: 0.8em;
+	margin-bottom: 0px;
+}
+
+#contact p
+{
+	margin-top: 0px;
+	font-size: 0.8em;
+}
+
+#about p
+{
+	text-align: justify;
+	padding: 0px 30px 0px 30px;
+	font-size: 0.8em;
+}
+
+#loisirs_logo
+{
+	display: flex;
+	justify-content: space-around;
+	color: #263238;
+}
+
+.fas
+{
+	font-size: 3em;
+}
+
+/*Début du côté droit*/
+
+#right_side
+{
+	margin-left: 50px;
+}
+
+header
+{
+	margin-bottom: 40px;
+}
+
+header h1
+{
+	margin-bottom: 1px;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+header h2
+{
+	margin-top: 0;
+	color: #263238;
+}
+
+#prenom
+{
+	color: #1976D2;
+}
+
+#devel
+{
+	border-bottom: 2px solid;
+	border-bottom-color: #1976D2;
+}
+
+.section_title
+{
+	display: flex;
+	border: 2px white solid;
+	border-bottom-color: #1976D2;
+}
+
+.section_title h1
+{
+	margin-left: 20px;
+	text-transform: uppercase;
+}
+
+.section_title i
+{
+	color: #1976D2;
+	font-size: 2em;
+	padding-top: 18px;
+}
+
+.section_info
+{
+	display: flex;
+	justify-content: space-between;
+	color: #263238;
+}
+
+aside
+{
+	padding-top: 5px;
+	width: 150px;
+	font-size: 0.7em;
+	list-style: none;
+}
+
+aside h1
+{
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+aside h2
+{
+	margin-top: 0px;
+	font-weight: normal;
+	margin-left: 15px;
+	font-size: 1.3em;
+}
+
+.fa-dot-circle
+{
+	font-size: 0.8em;
+	margin-right: 6px;
+	color: #1976D2;
+}
+
+.fa-circle
+{
+	font-size: 0.5em;
+	margin-right: 10px;
+	color: #1976D2;
+}
+
+.description
+{
+	margin-left: 10px;
+	flex: 1;
+	font-size: 0.8em;
+	text-align: justify;
+}
+
+.description h1
+{
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+
+.description h2
+{
+	margin-top: 0px;
+	font-size: 1.2em
+}
+
+#liste_recommendations
+{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	color: #263238;
+}
+
+#liste_recommendations ul
+{
+	list-style-type: none;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1000px)
+{
+	body
+	{
+		/*Largeur du contenu suit la largeur de la page*/
+		width: auto;
+	}
+
+	#bloc_page
+	{
+		/*Le contenu du liseré passe en bas de page*/
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.section_info
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	/*Toute la largeur en bas de la page*/
+	#left_side
+	{
+		width: auto;
+	}
+
+	#left_side_info
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#left_side img
+	{	
+		/*Enlever la photo*/
+		display: none;
+	}
+
+	/*Adapter les marges en bas de page*/
+	#left_side_info
+	{
+		margin: 0 5% 0 5%;
+		font-size: 1.8em;
+	}
+
+	#right_side
+	{
+		/*Adapter la marge du contenu principal*/
+		margin: 0 5% 0 5%;
+		font-size: 1.5em;
+	}
+
+	aside
+	{
+		/*date_location passe au-dessus, pas besoin de limiter la largeur*/
+		width: 100%;
+	}
+
+	#liste_recommendations
+	{
+		/*passent l'une en dessous de l'autre*/
+		display: flex;
+		flex-direction: column;
+	}
+}
